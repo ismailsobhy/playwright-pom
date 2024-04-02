@@ -14,7 +14,7 @@ export class HomePage {
     }
 
     // Check temperature if less than 19 then moisturizers and above 34 then sunscreens
-    async clickMainCategory() {
+    async clickMainCategory(lowtemp,hightemp) {
         const temperatureText = await this.temperatureSpan.textContent();
     
         if (temperatureText) {

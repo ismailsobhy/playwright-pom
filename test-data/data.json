@@ -7,6 +7,8 @@
         "cardnumber": "4242424242424242"
     },
     "moisturizers": ["Aloe","Almond"],
-    "sunscreens": ["SPF-50","SPF-30"]
+    "sunscreens": ["SPF-50","SPF-30"],
+    "lowtemplimit": 19,
+    "hightemplimit": 34
 
 }

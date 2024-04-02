@@ -14,7 +14,7 @@ test('Weather Shopper- buy moisturizers or sunscreens', async ({ page }) => {
     const paymentpage = new PaymentPage(page)
     await homepage.open();
     // Click on moisturizers or sunscreens depending on temp and return the category
-    const category = await homepage.clickMainCategory();
+    const category = await homepage.clickMainCategory(testData['lowtemplimit'],testData['hightemplimit']);
     let product1;
     let product2;
     let totalPrice=0
