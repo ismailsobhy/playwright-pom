@@ -47,3 +47,7 @@ cartpage.ts     homepage.ts     paymentpage.ts  productpage.ts
 Data is stored at `test-data/data.json`
 
 The testcase as requested `tests/test.spec.ts`
+
+# Github actions
+
+A Github actions runs the testcases on three browsers and share the report as in https://github.com/ismailsobhy/playwright-pom/actions/runs/8529964274
