@@ -1,0 +1,12 @@
+{
+
+    "user": {
+        "email": "iso@gmail.com",
+        "expiry": "04/30",
+        "cvc": "242",
+        "cardnumber": "4242424242424242"
+    },
+    "moisturizers": ["Aloe","Almond"],
+    "sunscreens": ["SPF-50","SPF-30"]
+
+}
