@@ -7,7 +7,7 @@ Welcome to the Playwright project! This README file will guide you through the s
 Clone the project
 
 ```
-git clone https://github.com/ismailsobhy/playwright.git
+git clone https://github.com/ismailsobhy/playwright-pom.git
 ```
 
 from root path project run this
