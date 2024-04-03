@@ -7,12 +7,21 @@ import { PaymentPage } from '../pages/paymentpage';
 const testData = JSON.parse(JSON.stringify(require('../test-data/data.json')));
 
 
+test.beforeEach(async ({ page }, testInfo) => {
+  console.log(`Running ${testInfo.title}`);
+  await page.goto('/');
+});
+
+test.afterEach(async ({ page }, testInfo) => {
+  console.log(`${testInfo.title} finshed with status ${testInfo.status}`);
+});
+
+
 test('Weather Shopper- buy moisturizers or sunscreens', async ({ page }) => {
     const homepage = new HomePage(page);
     const productpage = new ProductPage(page);
     const cartpage = new CartPage(page)
     const paymentpage = new PaymentPage(page)
-    await homepage.open();
     // Click on moisturizers or sunscreens depending on temp and return the category
     const category = await homepage.clickMainCategory(testData['lowtemplimit'],testData['hightemplimit']);
     let product1;
@@ -40,7 +49,7 @@ test('Weather Shopper- buy moisturizers or sunscreens', async ({ page }) => {
       await cartpage.clickPayButton();
 
       // Pay with stripe payment method with user details from test data
-      await paymentpage.fillStipePaymentForm(testData['user']);
+      await paymentpage.fillStipePaymentForm(testData['paymentdata']);
 
       await paymentpage.checkPaymentSuccess();
 

@@ -1,6 +1,6 @@
 {
 
-    "user": {
+    "paymentdata": {
         "email": "iso@gmail.com",
         "expiry": "04/30",
         "cvc": "242",

@@ -9,9 +9,6 @@ export class HomePage {
     
     }
 
-    async open() {
-        await this.page.goto('/');
-    }
 
     // Check temperature if less than 19 then moisturizers and above 34 then sunscreens
     async clickMainCategory(lowtemp,hightemp) {
