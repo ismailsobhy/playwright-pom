@@ -16,10 +16,10 @@ jobs:
       - name: Build Docker image
         run: docker build -t playwright-pom .
       - name: Run Playwright tests on Docker
-        run: docker run -v $(pwd)/playwright-report:/app/playwright-report playwright-pom --project=chromium
+        run: docker run -v $(pwd)/playwright-report:/app/playwright-report -e BROWSER=chromium playwright-pom
       - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: playwright-report
           path: playwright-report/
-          retention-days: 30
+          retention-days: 10
