@@ -16,7 +16,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t playwright-pom .
       - name: Run Playwright tests on Docker
-        run: docker run -v $(pwd)/playwright-report:/app/playwright-report -e BROWSER=chromium playwright-pom
+        run: docker run -v $(pwd)/playwright-report:/app/playwright-report -e project=chromium playwright-pom
       - uses: actions/upload-artifact@v3
         if: always()
         with:
