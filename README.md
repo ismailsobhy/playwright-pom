@@ -48,6 +48,20 @@ To have data driven project, we have data is stored at `test-data/data.json` suc
 
 The testcase as requested `tests/test.spec.ts`
 
+# Docker
+
+For using Docker locally, you will build the image:
+
+```
+docker build -t playwright-pom .
+```
+
+Run the container based on the previously built image
+
+```
+docker run playwright-pom
+```
+
 # Github actions
 
-A Github actions runs the testcases on three browsers and share the report as in https://github.com/ismailsobhy/playwright-pom/actions/runs/8529964274
+A Github action runs exists and uses docker within. The run is on three browsers and the report is shared as in https://github.com/ismailsobhy/playwright-pom/actions/runs/8545217091 and the report is retained for 15 days.
