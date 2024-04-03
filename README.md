@@ -44,9 +44,9 @@ Project Structure and Code reusability (including POM) for the following pages:
 cartpage.ts     homepage.ts     paymentpage.ts  productpage.ts
 ```
 
-To have data driven project, we have data is stored at `test-data/data.json` such as temp limits, what to select for moisturizers and sunscreens, and payment data.
+To have data driven project, we have data is stored at `test-data/data.json` such as temperature limits, what items to select for moisturizers and sunscreens, and payment data.
 
-The testcase as requested `tests/test.spec.ts`
+The testcase as requested is in `tests/test.spec.ts`
 
 # Docker
 
@@ -64,4 +64,4 @@ docker run playwright-pom
 
 # Github actions
 
-A Github action runs exists and uses docker within. The run is on three browsers and the report is shared as in https://github.com/ismailsobhy/playwright-pom/actions/runs/8545217091 and the report is retained for 15 days.
+A Github action runs exists and uses docker within. The run is on three browsers and the report in the run shared as in https://github.com/ismailsobhy/playwright-pom/actions/runs/8545307433 and the report is retained for 15 days.
