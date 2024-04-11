@@ -17,9 +17,9 @@ export class HomePage {
         if (temperatureText) {
             const temp=parseInt(temperatureText, 10);
             let category ='';
-            if(temp < 19)
+            if(temp < lowtemp)
                 category = 'moisturizers'
-            if(temp > 34)
+            if(temp > hightemp)
                 category = 'sunscreens';
             await this.page.click(`text=Buy ${category}`);
             return category;

@@ -19,6 +19,7 @@ export class CartPage {
     }
 
   // Check product details- title and price, in the table row
+  // product[0] is price and product[1] and is name
   async checkProductDetails(row,product) {
     const price=product[0]
     const name=product[1]
@@ -31,13 +32,14 @@ export class CartPage {
     await expect(price_col).toContain(price+''); 
     
   }
-
+  // Check total price
   async checkTotalPrice(total) {
     await this.page.waitForLoadState('domcontentloaded');
     await expect(this.totalPriceParagraph).toContainText(total);
    
   }
 
+  // click on pay button
   async clickPayButton(){
     await this.payButton.click()
   }
