@@ -30,19 +30,22 @@ test('Weather Shopper- buy moisturizers or sunscreens', async ({ page }) => {
     
      if (category) {
         // Get the products corresponding to this category from testdata
+        // Get minumum prices for first cateogry
         product1=await productpage.addProductToCart(testData[category][0]);
+        // Get minumum prices for second cateogry
         product2=await productpage.addProductToCart(testData[category][1]);
         // Get total price by adding both prices
         totalPrice=Number(product1[0]) + Number(product2[0]);
         
       } 
-      // Verify on how many items in the cart
+      // Verify on how many items added to the cart
       await productpage.verifyCountAddedToCart(2);
+      // Go to the cart
       await productpage.goToCart();
       // Check total price in the cart 
       await cartpage.checkTotalPrice(''+totalPrice);
       
-      // Check details for both products
+      // Check details for both products name and price
       await cartpage.checkProductDetails(1,product1);
       await cartpage.checkProductDetails(2,product2);
       

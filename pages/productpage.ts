@@ -30,6 +30,7 @@ export class ProductPage {
         let priceList: number[]=[];
         
         // Loop through each product card with the type
+        // and put is into the price list
         for (let i = 0; i < await productCardElementsWithType.count(); i++) {
           const productCardElement = productCardElementsWithType.nth(i);
           const priceParagraph = await productCardElement.locator(this.productPriceParagraph);
@@ -46,11 +47,12 @@ export class ProductPage {
             
         
         }
-      
+        
+        // Get button for cards : productCardElementsWithType
         const buttons = await productCardElementsWithType.locator(this.addToCartButtons);
-        // Get minumum price from the price list
+        // Get minumum price value from the price list
         let minValue =Math.min(...priceList);
-        // Get minumum index in the price lise
+        // Get index if minumum value in the price list
         let minIndex = priceList.indexOf(minValue);
         // Get text from the title
         let title= await productCardElementsWithType.locator(this.productNameParagraph).nth(minIndex).textContent();
